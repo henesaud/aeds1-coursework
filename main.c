@@ -414,7 +414,6 @@ int main(int argc, char **argv)
          }
       }
 
-      // se o tipo de evento for o fechamento da tela (clique no x da janela)
       else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
       {
 
@@ -432,7 +431,6 @@ int main(int argc, char **argv)
          return 0;
       }
 
-      // se eu alterei a posicao do bouncer, o redraw foi para true e eu nao tenho eventos na fila para ler
       if (redesenhar && al_is_event_queue_empty(fila_eventos))
       {
 
@@ -481,7 +479,7 @@ int main(int argc, char **argv)
          break;
       }
 
-   } // fim do while
+   }
 
    // VERIFICA SE GANHOU OU PERDEU
    if (!resultado)
